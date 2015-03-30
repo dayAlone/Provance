@@ -73,7 +73,7 @@ include('./.left.menu.php');
   <section id="about-fourth" class="page">
     <div class="container">
     	<div class="row">
-    		<div class="col-xs-6">
+    		<div class="col-xs-5">
     			<?
   			      $APPLICATION->IncludeComponent("bitrix:news.list", "staff", 
   			        array(
@@ -89,7 +89,7 @@ include('./.left.menu.php');
   			      );
   			    ?>
     		</div>
-    		<div class="col-xs-6">
+    		<div class="col-xs-7">
     			<h1 class="page__title left"><?=$aMenuLinks[2][0]?></h1>
     			<?=COption::GetOptionString("grain.customsettings", $lang."_about_fourth") ?>
     		</div>

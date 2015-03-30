@@ -1178,6 +1178,32 @@ body.fabric {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+}
+body.fabric .page {
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -o-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  max-height: 1800px;
+}
+@media (min-height: 680px) {
+  body.fabric .page {
+    max-height: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+body.text {
+  overflow: auto;
   padding-top: 150px;
 }
 .container {
@@ -2562,33 +2588,41 @@ svg g {
   text-decoration: none;
 }
 .page .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.footer {
   background: url("../images/footer.jpg") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  height: 105px;
-  line-height: 105px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  height: 80px;
+  line-height: 80px;
   width: 100%;
   color: #fff;
   padding: 0 50px;
   font-weight: 300;
 }
-.page .footer a svg {
+@media (min-height: 680px) {
+  .footer {
+    height: 105px;
+    line-height: 105px;
+  }
+}
+.footer a svg {
   margin: 0 5px;
   display: inline-block;
   vertical-align: middle;
   width: 29px;
   height: 29px;
 }
-.page .footer .contacts {
+.footer .contacts {
   display: inline-block;
   vertical-align: middle;
   line-height: 20px;
 }
-.page .footer .contacts a {
+.footer .contacts a {
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(255,255,255,0.4) 50%);
   background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(255,255,255,0.4) 50%);
   background-image: -o-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(255,255,255,0.4) 50%);
@@ -2600,23 +2634,25 @@ svg g {
   background-size: 2px 2px;
   background-position: 0 calc(100% - 2px);
 }
-.page .footer .contacts a:hover {
+.footer .contacts a:hover {
   text-decoration: none;
 }
-.page .footer .info {
+.footer .info {
   text-align: center;
+  position: relative;
+  left: -20px;
 }
-.page .footer .info a,
-.page .footer .info span {
+.footer .info a,
+.footer .info span {
   margin: 0 10px;
 }
 @media (min-width: 1200px) {
-  .page .footer .info a,
-  .page .footer .info span {
+  .footer .info a,
+  .footer .info span {
     margin: 0 30px;
   }
 }
-.page .footer .info a {
+.footer .info a {
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(255,255,255,0.4) 50%);
   background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(255,255,255,0.4) 50%);
   background-image: -o-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(255,255,255,0.4) 50%);
@@ -2628,25 +2664,34 @@ svg g {
   background-size: 2px 2px;
   background-position: 0 11px;
 }
-.page .footer .info a:hover {
+.footer .info a:hover {
   text-decoration: none;
 }
-.page .footer .logo svg {
-  vertical-align: middle;
-  width: 150px;
-  height: 60px;
+.footer .logo {
+  margin-left: 0;
 }
-.page .footer .logo svg #logo path,
-.page .footer .logo svg #Group-89 path,
-.page .footer .logo svg #logo path#Fill-1,
-.page .footer .logo svg #logo path#Fill-2,
-.page .footer .logo svg #logo path#Fill-3,
-.page .footer .logo svg #logo path#Fill-4,
-.page .footer .logo svg #logo path#Fill-5,
-.page .footer .logo svg #logo path#Fill-6 {
+.footer .logo svg {
+  vertical-align: middle;
+  width: 100px;
+  height: 55px;
+}
+.footer .logo svg #logo path,
+.footer .logo svg #Group-89 path,
+.footer .logo svg #logo path#Fill-1,
+.footer .logo svg #logo path#Fill-2,
+.footer .logo svg #logo path#Fill-3,
+.footer .logo svg #logo path#Fill-4,
+.footer .logo svg #logo path#Fill-5,
+.footer .logo svg #logo path#Fill-6 {
   fill: #fff !important;
 }
-.page .footer a {
+@media (min-height: 680px) {
+  .footer .logo svg {
+    height: 70px;
+    width: 120px;
+  }
+}
+.footer a {
   color: #fff;
 }
 .slider {
@@ -2654,10 +2699,10 @@ svg g {
 }
 .slider .page {
   height: 100%;
-  overflow: hidden;
+  overflow: hidden !important;
   width: 100%;
   min-height: 600px;
-  height: 600px;
+  height: 550px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

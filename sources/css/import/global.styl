@@ -21,6 +21,15 @@ body
 	&.fabric
 		background url(../images/fabric.jpg) top left no-repeat
 		background-size cover
+		.page
+			transform-origin top center
+			transform scale(.7)
+			max-height 1800px
+			@media (min-height: 680px)
+				max-height none
+				transform none
+	&.text
+		overflow auto	
 		padding-top 150px
 		
 .container

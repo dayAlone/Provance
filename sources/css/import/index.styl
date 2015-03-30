@@ -49,50 +49,59 @@
 			font-weight: bold
 			font-size 16px
 			margin-bottom 16px
-	
 	.footer
-		background url(../images/footer.jpg) center center
-		background-size cover
-		height 105px
-		line-height 105px
 		position absolute
 		left 0
 		bottom 0
-		width 100%
-		color white
-		padding 0 50px
-		font-weight 300
-		a
-			svg
-				margin 0 5px
-				display inline-block
-				vertical-align: middle
-				width 29px
-				height 29px
-		.contacts
+.footer
+	background url(../images/footer.jpg) center center
+	background-size cover
+	height 80px
+	line-height 80px
+	@media (min-height: 680px)
+		height 105px
+		line-height 105px
+	width 100%
+	color white
+	padding 0 50px
+	font-weight 300
+	a
+		svg
+			margin 0 5px
 			display inline-block
 			vertical-align: middle
-			line-height 20px
-			a
-				border-line alpha(white, .4)
-		.info
-			text-align: center
-			a, span
-				margin 0 10px
-				@media (min-width: scr_lg)
-					margin 0 30px
-			a
-				border-line alpha(white, .4), 11px
-					
-		.logo
-			svg
-				vertical-align: middle
-				width 150px
-				height 60px
-				#logo path, #Group-89 path, #logo path#Fill-1, #logo path#Fill-2, #logo path#Fill-3, #logo path#Fill-4, #logo path#Fill-5, #logo path#Fill-6
-					fill white !important
+			width 29px
+			height 29px
+	.contacts
+		display inline-block
+		vertical-align: middle
+		line-height 20px
 		a
-			color white
+			border-line alpha(white, .4)
+	.info
+		text-align: center
+		position relative
+		left -20px
+		a, span
+			margin 0 10px
+			@media (min-width: scr_lg)
+				margin 0 30px
+		a
+			border-line alpha(white, .4), 11px
+				
+	.logo
+		margin-left 0
+		svg
+			vertical-align: middle
+			width 100px
+			height 55px
+			#logo path, #Group-89 path, #logo path#Fill-1, #logo path#Fill-2, #logo path#Fill-3, #logo path#Fill-4, #logo path#Fill-5, #logo path#Fill-6
+				fill white !important
+			@media (min-height: 680px)
+				height 70px
+				width 120px
+	a
+		color white
 .slider
 	display none
 	.page
@@ -104,10 +113,10 @@
 			transform translate(-50%, -50%)
 			transform translate(-50%, calc(-50% + 30px))
 		height 100%
-		overflow hidden
+		overflow hidden !important
 		width 100%
 		min-height 600px
-		height 600px
+		height 550px
 		background-size cover
 		background-position center center
 		position relative

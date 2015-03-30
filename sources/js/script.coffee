@@ -45,7 +45,8 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 delay = (ms, func) -> setTimeout func, ms
 
 size = ->
-	$('.page').height $(window).height()
+	$('body:not(.text) .page').css
+		minHeight: $(window).height()
 	
 	if $('.scroll').length > 0
 		$('.scroll').perfectScrollbar 'update'
@@ -276,40 +277,40 @@ $(document).ready ->
 		
 
 		#$('.slider').flipBook()
-		
-		$('.slider').show().onepage_scroll
-			animationTime: 1000
-			pagination: false
-			sectionContainer: "section"
-			loop: false
-			#easing : 'cubic-bezier(.175, .885, .32, 1)'
-			afterMove: (a, e)->
-				block	 = $(".slider section:nth-child(#{a})")
-				$(".slider section video").each ->
-					this.pause()
-				if block.find('video').length > 0
-					block.find('video')[0].play()
+		if $('.slider').length > 0 
+			$('.slider').show().onepage_scroll
+				animationTime: 1000
+				pagination: false
+				sectionContainer: "section"
+				loop: false
+				#easing : 'cubic-bezier(.175, .885, .32, 1)'
+				afterMove: (a, e)->
+					block	 = $(".slider section:nth-child(#{a})")
+					$(".slider section video").each ->
+						this.pause()
+					if block.find('video').length > 0
+						block.find('video')[0].play()
 
 
-				if(history.pushState)
-					history.pushState null, null, '#' + block.attr 'id'
-				else
-					location.hash = block.attr 'id'
+					if(history.pushState)
+						history.pushState null, null, '#' + block.attr 'id'
+					else
+						location.hash = block.attr 'id'
 
-			beforeMove: (a, e)->
-				nav		 = $('.nav')
-				block	 = $(".slider section:nth-child(#{a})")
-				
-				# Nav links
-				nav.elem('item').mod 'active', false
-				nav.find("a[href*='#{block.attr('id')}']").addClass 'nav__item--active'
-				
-				# Nav colors
-				if block.data('mods')
-					mods		= block.data('mods').split(', ')
-					navMods = ['gold', 'white', 'brown']
+				beforeMove: (a, e)->
+					nav		 = $('.nav')
+					block	 = $(".slider section:nth-child(#{a})")
 					
-					changeMods nav, mods, navMods
+					# Nav links
+					nav.elem('item').mod 'active', false
+					nav.find("a[href*='#{block.attr('id')}']").addClass 'nav__item--active'
+					
+					# Nav colors
+					if block.data('mods')
+						mods		= block.data('mods').split(', ')
+						navMods = ['gold', 'white', 'brown']
+						
+						changeMods nav, mods, navMods
 
 		if location.hash
 			if $("#{location.hash}").hasClass 'modal'

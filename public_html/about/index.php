@@ -10,10 +10,10 @@ include('./.left.menu.php');
   <section id="about-first" class="page">
     <div class="container">
       <div class="row">
-        <div class="col-xs-5">
+        <div class="col-xs-5 col-xs-offset-1">
           {GALLERY:1}
         </div>
-        <div class="col-xs-7 xxl-padding-left">
+        <div class="col-xs-6 xxl-padding-left">
           <div class="scroll">
             <div class="scroll__frame">
               <?=COption::GetOptionString("grain.customsettings", $lang."_about_first") ?>

@@ -256,7 +256,12 @@
     $('#News').on('show.bs.modal', function(a, b) {
       var url;
       url = $(a.relatedTarget).data('url');
-      return $('#News .news').load(url);
+      return $('#News .news').load(url, function() {
+        return $("#News .carousel").waterwheelCarousel({
+          autoPlay: 2000,
+          speed: 0
+        });
+      });
     });
     delay(300, function() {
       var paths, tl;
@@ -329,12 +334,6 @@
         if (!$('#Map').data('loaded')) {
           return $.getScript('https://maps.googleapis.com/maps/api/js?callback=mapInit');
         }
-      });
-    });
-    $('#News').on('shown.bs.modal', function() {
-      return $("#News .carousel").waterwheelCarousel({
-        autoPlay: 2000,
-        speed: 0
       });
     });
     if ($('.scroll').length > 0) {

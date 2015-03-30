@@ -79,7 +79,10 @@ $(document).ready ->
 
 	$('#News').on 'show.bs.modal', (a,b)->
 		url = $(a.relatedTarget).data 'url'
-		$('#News .news').load url
+		$('#News .news').load url, ->
+			$("#News .carousel").waterwheelCarousel
+				autoPlay: 2000
+				speed: 0
 
 	delay 300, ->
 		paths = $('#home path:not(defs path)')
@@ -137,10 +140,7 @@ $(document).ready ->
 			if !$('#Map').data 'loaded'
 				$.getScript 'https://maps.googleapis.com/maps/api/js?callback=mapInit'
 
-	$('#News').on 'shown.bs.modal', ->
-		$("#News .carousel").waterwheelCarousel
-			autoPlay: 2000
-			speed: 0
+
 
 	if $('.scroll').length > 0
 		$('.scroll').perfectScrollbar

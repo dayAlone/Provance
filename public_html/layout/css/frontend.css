@@ -4729,7 +4729,6 @@ svg g {
 }
 .enter .footer span,
 .slider #home .contacts span {
-  text-transform: uppercase;
   position: relative;
   margin: 0 70px;
 }

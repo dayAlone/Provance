@@ -1,5 +1,5 @@
 <? $this->setFrameMode(true);?>
-<div data-autoplay="true" data-arrows="false" data-width="100%" class="fotorama" data-height="390">
+<div data-autoplay="true" data-arrows="false" data-width="100%" class="fotorama" data-height="410">
 <?foreach ($arResult['ITEMS'] as $key=>$item):
   if($key%6 == 0):
     if($key != 0) echo "</div>";

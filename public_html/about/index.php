@@ -89,7 +89,7 @@ include('./.left.menu.php');
   			      );
   			    ?>
     		</div>
-    		<div class="col-xs-6">
+    		<div class="col-xs-6 xxl-padding-left">
     			<h1 class="page__title left"><?=$aMenuLinks[2][0]?></h1>
     			<?=COption::GetOptionString("grain.customsettings", $lang."_about_fourth") ?>
     		</div>

@@ -43,7 +43,7 @@ include('./.left.menu.php');
       <div class="row">
         <div class="col-xs-5 col-xs-offset-1"><img src="/layout/images/h-2.png" class="max-width"></div>
         <div class="col-xs-6 xxl-padding-left">
-          <h1 class="page__title"><?=$aMenuLinks[0][0]?></h1>
+          <h1 class="page__title m-margin-top"><?=$aMenuLinks[0][0]?></h1>
           <div class="scroll">
             <div class="scroll__frame">
               <?=COption::GetOptionString("grain.customsettings", $lang."_about_second") ?>
@@ -90,7 +90,7 @@ include('./.left.menu.php');
   			    ?>
     		</div>
     		<div class="col-xs-6">
-    			<h1 class="page__title left m-margin-top"><?=$aMenuLinks[2][0]?></h1>
+    			<h1 class="page__title left"><?=$aMenuLinks[2][0]?></h1>
     			<?=COption::GetOptionString("grain.customsettings", $lang."_about_fourth") ?>
     		</div>
     	</div>

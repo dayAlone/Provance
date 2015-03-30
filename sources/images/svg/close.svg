@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Portrait-Retina" sketch:type="MSArtboardGroup" transform="translate(-429.000000, -1922.000000)" fill="#532F1B">
+            <path d="M460.978,1924.284 L458.694,1922 L444.989,1935.705 L431.284,1922 L429,1924.284 L442.705,1937.989 L429,1951.694 L431.284,1953.978 L444.989,1940.273 L458.694,1953.978 L460.978,1951.694 L447.273,1937.989 L460.978,1924.284" id="close" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

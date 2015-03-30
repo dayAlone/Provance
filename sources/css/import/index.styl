@@ -1,0 +1,333 @@
+.page
+	.scroll
+		overflow hidden
+		position relative
+		max-height 195px
+		@media (min-height: 600px)
+			max-height 220px
+		@media (min-height: 680px)
+			max-height 304px
+		@media (min-height: 720px)
+			max-height 364px
+		@media (min-height: 800px)
+			max-height 384px
+		@media (min-height: 850px)
+			max-height 430px
+		+ p
+			margin-top 20px
+		&__frame
+			full-width()
+			max-width 92%
+	&__divider
+		margin 120px 0
+	&__title
+		font-size 47px
+		font-weight: normal
+		margin-top 0
+	&__sub-title
+		font-size 25px
+		font-weight: bold
+	.cert
+		background-size 315px auto
+		background-position center center
+		background-repeat: no-repeat
+		text-align: center
+		img
+			max-width 100%
+	p
+		font-size 16px
+		+ p
+			margin-top 20px
+		a
+			color #532f1b
+			border-line alpha(#532f1b, .5)
+			font-weight: bold
+			font-size 16px
+			margin-bottom 16px
+	
+	.footer
+		background url(../images/footer.jpg) center center
+		background-size cover
+		height 105px
+		line-height 105px
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		color white
+		padding 0 50px
+		font-weight 300
+		a
+			svg
+				margin 0 5px
+				display inline-block
+				vertical-align: middle
+				width 29px
+				height 29px
+		.contacts
+			display inline-block
+			vertical-align: middle
+			line-height 20px
+			a
+				border-line alpha(white, .4)
+		.info
+			text-align: center
+			a, span
+				margin 0 10px
+				@media (min-width: scr_lg)
+					margin 0 30px
+			a
+				border-line alpha(white, .4), 11px
+					
+		.logo
+			svg
+				vertical-align: middle
+				width 150px
+				height 60px
+				#logo path, #Group-89 path, #logo path#Fill-1, #logo path#Fill-2, #logo path#Fill-3, #logo path#Fill-4, #logo path#Fill-5, #logo path#Fill-6
+					fill white !important
+		a
+			color white
+.slider
+	display none
+	.page
+		> .container
+			position absolute
+			top 50%
+			left 50%
+			z-index: 200
+			transform translate(-50%, -50%)
+			transform translate(-50%, calc(-50% + 30px))
+		height 100%
+		overflow hidden
+		width 100%
+		min-height 600px
+		height 600px
+		background-size cover
+		background-position center center
+		position relative
+	#collection
+		background-image url(../images/bg-collection.jpg)
+		background-position top center
+		color #b68142
+		a
+			display inline-block
+			color #b9874d
+			font-size 16px
+			font-weight: bold
+			border-line alpha(@color, .5)
+			&:hover
+				color white
+				border-line alpha(@color, .5)
+		.collection
+			&__bottom
+				position absolute
+				left 50%
+				bottom 20px
+				transform translateX(-50%)
+				color white
+				border-line alpha(@color, .5)
+				font-size 14px
+			&__link
+				font-weight: normal
+				font-size 30px
+				background transparent 
+				margin 6vh 0 22vh
+				position relative
+				&.xxl-margin-right
+					margin-right 70px !important
+					&:hover
+						&:after
+							border-right-color: white;
+							opacity 1
+					&:after
+						left: 100%;
+						top: 50%;
+						transform translateY(-50%)
+						margin-left 15px
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+						border-color: rgba(185, 135, 77, 0);
+						border-right-color: #b9874d;
+						border-width: 30px;
+						opacity .53
+						t border
+				&.xxl-margin-left
+					margin-left 70px !important
+					&:hover
+						&:after
+							border-left-color: white;
+							opacity 1
+					&:after
+						right: 100%;
+						top: 50%;
+						transform translateY(-50%)
+						margin-right 25px
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+						border-color: rgba(185, 135, 77, 0);
+						border-left-color: #b9874d;
+						border-width: 30px;
+						opacity .78
+						t border
+	#chocolate
+		.video
+			background-image url(../images/bg-chocolate.jpg)
+		color #b68142
+		a
+			color #b68142
+			border-line alpha(#b68142, .7)
+			font-weight: bold
+			font-size 16px
+			margin 0 25px
+			&.disabled
+				color #664010
+				background transparent
+	#media
+		background url(../images/wood.jpg)
+		background-size auto 100%
+		color #532f1b
+		#news
+			.scroll
+				max-width 95%	
+		.scroll
+			margin-top 20px
+			&__frame
+				max-width 97%
+		> .container
+			margin-top -60px
+			
+		.media
+			&__item
+				width 100%
+				margin-top 20px
+				height 220px
+				background-size cover
+				position relative
+				display inline-block
+				&:first-of-type
+					margin-top 0
+			&__title
+				color white
+				font-weight: bold
+				font-size 16px
+				position absolute
+				left 0
+				bottom 10px
+				padding 0 15px
+	#about
+		background-image url(../images/bg-history.jpg)
+		background-position bottom center
+		color #532f1b
+		img
+			max-width 100%
+		.scroll
+			@media (min-height: 600px)
+				max-height 174px
+			@media (min-height: 680px)
+				max-height 294px
+			@media (min-height: 800px)
+				max-height 344px
+		.container
+			transform translateX(-50%) translateY(-50%)
+	#store
+		background-image url(../images/bg-store.jpg)
+		color #532f1b
+		p
+			font-weight: bold
+		a
+			color #532f1b
+			border-line alpha(@color, .5)
+		.divider
+			margin 0 15px
+			width 1px
+			background #532f1b
+			min-height 20px
+			vertical-align: middle
+			display: inline-block
+	#home
+		text-align: center
+		background-image url(../images/bg-index.jpg)
+		svg
+			width 700px
+			min-height 200px
+		.logo
+			p
+				color rgba(255,255,255,.7)
+			svg
+				vertical-align: middle
+				margin-bottom 40px
+				width 310px
+				height 187px
+				path, g
+					fill white 
+		.contacts
+			@extends .enter .footer
+
+.news
+	&__item
+		width 98%
+		margin-top 20px
+		&:first-of-type
+			margin-top 0
+	&__date
+		color #532f1b
+		font-weight: bold
+		font-size 25px
+		margin-bottom 7px
+		margin-top -7px
+	&__title
+		color #532f1b
+		border-line alpha(@color, .4), 14px
+		max-width 95%
+		&:active, &:focus
+			color #532f1b
+		&:hover
+			color #ac945f
+	&__info, &__title
+		font-weight: bold
+		font-size 18px
+	&__info
+		color #532f1b
+		margin-top 1.3vh
+	&__image
+		width 100%
+		display inline-block
+		height 200px
+		background-size cover
+
+.recept
+	margin-top 30px
+	p
+		font-size 18px
+	.row + .row
+		margin-top 40px
+.recepts
+	&__image
+		width 100%
+		height 200px
+		background-size cover
+		display block
+	&__item
+		width 100%
+		margin-top 20px
+	&__text
+		font-size 16px
+		margin-top 10px
+		max-width 90%
+	&__title
+		font-weight bold
+		font-size 25px
+		line-height 28px
+		color #532f1b
+		border-line alpha(@color, .4)
+		&:hover
+			color #c48e42

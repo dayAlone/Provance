@@ -1,0 +1,611 @@
+html, body
+	height 100%
+body
+	font-family 'CharterWeb', 'Times New Roman', 'Arial', sans-serif
+	min-height 100%
+	color white
+	&.loaded
+		background #301e1b
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:translate3d(0,0,0)
+	-webkit-transform-style: preserve-3d;
+	&.inner
+		color #532f1b
+	&.about
+		background url(../images/about-full-bg.jpg) top left no-repeat
+		background-size cover
+	&.product
+		background url(../images/modal.jpg) top left no-repeat
+		background-size cover
+	&.fabric
+		background url(../images/fabric.jpg) top left no-repeat
+		background-size cover
+		padding-top 150px
+		
+.container
+	min-width 980px
+
+.float-right
+	float: right
+
+.fabric
+	h1
+		font-size 47px
+	.page
+		.container
+			font-size 19px
+			color #532f1b
+			font-weight: bold
+	&__block
+		position relative
+		height 200px
+		width 200px
+		display inline-block
+		margin 30px 0
+		img, &:after
+			vertical-align: middle
+			t transform
+		&:after, .fabric__text, img
+			position absolute
+			top 50%
+			left 50%
+			transform-origin center center
+			transform translateX(-50%) translateY(-50%) scale(0.97)
+		&:after
+			width 200px
+			height 200px
+			content ""
+			box-shadow -2.6px 4.2px 5px rgba(32, 22, 0, 0.5)
+			border-radius 50%
+			background rgba(255, 255, 255, .75)
+		&:not(.fabric__block--transparent):hover
+			img
+				transform translateX(-50%) translateY(-50%) scale(1.03)
+		&--transparent
+			&:after
+				background transparent
+	&__text
+		z-index 300
+		text-shadow -1.1px 1.7px 5px rgba(32, 22, 0, 0.72)
+		font-weight: bold
+		color white
+		font-size 22px
+		white-space no-wrap
+		display inline-block
+		text-align: center
+				
+			
+
+.industies
+	text-align: center
+	position absolute
+	top 50%
+	left 50%
+	transform translateX(-50%) translateY(-50%)
+	margin-top 40px
+	.industies__nav
+		line-height 20px
+		margin-bottom 20px
+		a
+			font-size 17px
+			color #c0a878
+			margin 10px 10px 0
+			t all
+			display inline-block
+			white-space no-wrap
+			&.active
+				
+				font-size 19px
+				font-weight: bold
+				color #c0a878
+				border-line alpha(@color, .4)
+			&:hover
+				color #432c1e
+				background transparent
+				
+	&__item
+		min-height 330px
+		width 100%
+		background-position bottom center
+		background-repeat no-repeat
+	.industies__title
+		font-weight: bold
+		font-size 24px
+		padding-top 30px
+	&__text
+		font-size 13px
+	.fotorama__arr
+		background transparent
+
+
+.public
+	position absolute
+	width 100%
+	height 100%
+	
+	@media (min-height: 600px)
+		padding-top 180px	
+	&__slider
+		bottom -150px
+		left 50%
+		width 100%
+		text-align: center
+		max-width 1400px
+		margin 0 auto
+		transform translateX(-50%)
+		@media (min-height: 600px)
+			bottom 0
+		&--init
+			position absolute
+		.fotorama__arr
+			background transparent
+	&__item
+		> img
+			position absolute
+			left 50%
+			z-index 10
+			transform translateX(-50%)
+			bottom 80px
+			@media (min-height: 600px)
+				bottom 0
+	&__text
+		position absolute
+		opacity 0
+		pointer-events none
+		width 250px
+		t opacity
+		@media (min-height: 600px)
+			width 200px
+		text-align: left
+		p
+			font-size 12px !important
+			
+	&__pack
+		position absolute
+		left 50%
+		transform translateX(-50%) translateY(-50%)
+		top 50%
+		cursor pointer
+		t all, .7s
+		img
+			background white
+			display inline-block
+			box-shadow -0.8px 2.9px 5px rgba(32, 22, 0, 0.47)
+			max-height 200px
+			@media (min-height: 600px)
+				max-height none
+		&--active
+			animation-duration: .5s;
+			animation-fill-mode: forwards;
+			&.end
+				animation-fill-mode: forwards;
+				&.public__pack--left
+					animation-name: moveLeftBack;
+				&.public__pack--right
+					animation-name: moveRightBack;
+				.public__text
+					opacity 0
+					transition-delay 0
+			&.public__pack--left
+				animation-name: moveLeft;
+			&.public__pack--right
+				animation-name: moveRight;
+			.public__text
+				opacity 1
+				transition-delay .5s
+				pointer-events initial
+		&--right
+			margin-left 300px
+			.public__text
+				left 135%
+			img
+				transform rotate(20deg)
+		&--left
+			margin-left -300px
+			.public__text
+				right 130%
+			img
+				transform rotate(-20deg)
+		&--top
+			margin-top -125px
+			@media (min-height: 600px)
+				margin-top -45px
+			.public__text
+				top 0
+			&.public__pack--left
+				img
+					transform rotate(-7deg) 
+				margin-left -270px
+			&.public__pack--right
+				img
+					transform rotate(7deg)
+				margin-left 270px
+		&--bottom
+			margin-top 0px
+			@media (min-height: 600px)
+				margin-top 120px
+			.public__text
+				top -125px
+				@media (min-height: 600px)
+					top -100px
+			&.public__pack--left
+				margin-left -330px
+			&.public__pack--right
+				margin-left 330px
+		&--disable
+			opacity .3
+			&.public__pack--left
+				margin-left 0
+			&.public__pack--right
+				margin-left 0
+			&.public__pack--top
+				margin-top 100px
+
+	&__title
+		@extends .industies .industies__title
+		padding-top 0
+		@media (min-height: 600px)
+			margin-top 20px
+			padding-top 30px
+	&__nav
+		padding 0 15%
+		text-align center
+		margin 0 auto
+		top auto
+		position absolute
+		@extends .industies .industies__nav
+		bottom 350px
+		@media (min-height: 600px)
+			bottom 485px
+		@media (min-height: 700px)
+			bottom 530px
+
+@keyframes moveLeft
+	50%
+		margin-left -350px
+	100%
+		margin-left -300px
+		z-index 30
+@keyframes moveRight
+	50%
+		margin-left 350px
+	100%
+		margin-left 300px
+		z-index 30
+@keyframes moveLeftBack
+	0%
+		z-index 30
+		margin-left -300px
+	50%
+		z-index 1
+		margin-left -350px
+	100%
+		z-index 1
+		
+@keyframes moveRightBack
+	0%
+		z-index 30
+		margin-left 300px
+	50%
+		z-index 1
+		margin-left 350px
+	100%
+		z-index 1
+svg
+	t fill
+	path, g
+		t fill
+
+.scroll-fix, .loader, .enter
+	position fixed
+	width 100%
+	height 100%
+	top 0
+	left 0
+	z-index 300000
+	pointer-events none
+	&--on
+		pointer-events initial
+
+.loader
+	pointer-events initial
+	background #241d16
+	z-index 3000001
+
+.fotorama__dot
+	width 10px !important
+	height 10px !important
+	background #532f1b
+	border-radius 10px
+	margin 0 5px
+	opacity .4
+	margin-top 6px
+	t opacity
+	border 0
+	.fotorama__active &
+		opacity 1
+
+.modal
+	&-dialog
+		@media (min-width: 768px)
+			width 800px
+	&-lg
+		@media (min-width: 1280px)
+			width 1200px
+
+#about-fourth
+	> .container
+		@media (min-height: 680px)
+			margin-top -10px
+		@media (min-height: 800px)
+			margin-top -30px
+	.scroll
+		@media (min-height: 600px)
+			max-height 154px
+		@media (min-height: 680px)
+			max-height 246px
+		@media (min-height: 800px)
+			max-height 380px
+	.fotorama
+		max-height 360px
+		@media (min-height: 680px)
+			max-height none
+	.person
+		display inline-block
+		width 25%
+		vertical-align: top
+		margin 0 14px
+		line-height 13px
+		margin-bottom 20px
+		position relative
+		img
+			max-width 100%
+		&__email
+			position absolute
+			color #522f1d
+			font-weight: bold
+			left 50%
+			transform translateX(-50%)
+			top 100%
+			font-size 11px
+			opacity 0
+			margin-top 5px
+			t all
+			pointer-events none
+		
+		&:hover
+			.person__email
+				opacity 1
+				pointer-events initial
+			
+		&__image
+			margin-bottom 15px
+			position relative
+			&-elm
+				-webkit-filter: grayscale(100%) sepia(50%) 
+				background-size auto 75%
+				background-position center center
+				position absolute
+				top 0
+				left 0
+				width 100%
+				height 100%
+				z-index -1
+				background-repeat no-repeat
+			img
+				margin-right 8px
+				display inline-block
+				margin-bottom -10px
+				max-height 100px
+				@media (min-height: 640px)
+					max-height none
+		&__name
+			font-size 14px
+			font-weight: bold
+			width 100%
+			margin-bottom 3px
+			display inline-block
+		&__info
+			font-size 11px
+.max-width
+	max-width 100%
+.enter
+	pointer-events initial
+	background #853f7e
+	text-align: center
+	overflow: hidden
+	display none
+	.loaded &
+		display block
+	.footer
+		position absolute
+		bottom 15px
+		font-size 15px
+		z-index 20
+		width 100%
+		color white
+		text-align: center
+		span
+			text-transform: uppercase
+			position relative
+			margin 0 70px
+			&:after
+				content ""
+				border-left 1px solid white
+				position absolute
+				top -3px
+				left -20px
+				height 20px
+		a
+			color white
+			border-line alpha(@color, .4), 12px
+			&:hover
+				color #b69b62
+				border-line alpha(@color, .4), 12px
+	.panel
+		z-index 20
+		position absolute
+		top 50%
+		height 60px
+		width 100%
+		margin-top -30px
+		line-height: 64px
+		background url(../images/lang.png) center center repeat-y
+		background-size cover
+		a
+			font-weight: bold
+			color #634b3c
+			font-size 21px
+			margin 0 60px
+			&:focus
+				color #634b3c
+			&:hover
+				color #b69b62
+	.logo
+		z-index 20
+		position absolute
+		top 50%
+		left 50%
+		margin-left: -126px
+		margin-top -300px
+		svg
+			path
+				fill white
+	.video
+		opacity .7
+
+.video
+	transform translate(-50%, -50%)
+	position absolute
+	top 50%
+	left 50%
+	pointer-events none
+	width 100%
+	height 100%
+	z-index -1000
+	.mobile &
+		display none !important
+	
+@keyframes zoom
+	from
+		transform scale(1)
+	to
+		transform scale(1.1)
+
+.dropdown
+	&__frame, &__select
+		display none
+.queryloader__overlay
+	&__percentage
+		margin-top 0 !important
+		transform translateY(-50%)
+		color #522f1d !important
+		font-size 80px !important
+		height auto !important
+	&__bar
+		left 50%
+		t width
+		margin-top -8px !important
+		transform translateX(-50%)
+
+.countries
+	list-style: none
+	padding-left 20px
+	li
+		margin-bottom 5px
+		.country
+			font-size 22px
+			font-weight: bold
+			color #532f1b
+			border-line alpha(@color, .4)
+		&.open
+			.country
+				background transparent
+		ul
+			display none
+			margin-top 10px
+			list-style: none
+			margin-bottom 20px
+			padding-left 10px
+			li
+				margin-bottom 5px
+				.city
+					color #532f1b
+					border-line alpha(@color, .4)
+					font-size 18px
+ 
+
+.ps-scrollbar-y-rail
+	right 0px
+	width 5px !important
+	background alpha(#593824, .2) !important
+	opacity 1 !important
+	border-radius 0 !important
+	.ps-scrollbar-y
+		width 100% !important
+		background alpha(#593824, 1) !important
+		border-radius 0 !important
+
+.carousel
+	height 380px
+	overflow hidden
+	margin 30px 0
+	img
+		t all
+		max-height 380px
+
+#News
+	p 
+		margin-bottom 20px
+		font-size 16px
+		&.center
+			margin 0 auto
+			margin-bottom 20px
+			max-width 70%
+
+.modal
+	color #532f1b
+	img
+		max-width 100%
+	.scroll
+		max-height 480px
+		overflow: hidden
+		position relative
+		&__frame
+			max-width 97%
+	.close
+		position absolute
+		right 20px
+		top 20px
+		svg
+			width 40px
+			height 40px
+	&__title
+		font-size 47px
+		margin-top 0
+		
+		&.center
+			margin 0 auto
+		margin-bottom 10px !important
+		max-width 80%
+	&__sub-title
+		font-weight: bold
+		margin-top -20px
+		font-size 25px
+		max-width 70%
+	&__map
+		width 100%
+		min-height 550px
+		box-shadow 0 0 5px rgba(32, 22, 0, 0.79)
+		img
+			max-width none
+	&-content
+		border-radius 0
+		min-height 400px
+		padding 30px
+		background url(../images/modal.jpg) top center no-repeat
+		background-size cover
+	&-backdrop
+		&.in
+			opacity .6

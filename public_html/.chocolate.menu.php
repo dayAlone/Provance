@@ -1,0 +1,1 @@
+<? require('./fabrication/.left.menu.php')?>

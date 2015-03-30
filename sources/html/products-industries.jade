@@ -1,0 +1,54 @@
+include includes/header
+<body class="product inner">
+
+.toolbar
+	.container
+		.row
+			nav.nav.nav--brown
+				include includes/toolbar
+				
+#loader.loader
+
+.page
+	.hidden
+		.arrow
+			.arrow__prev
+				include ../../public_html/layout/images/svg/left.svg
+			.arrow__next
+				include ../../public_html/layout/images/svg/right.svg
+
+	.industies
+		.industies__nav
+			a(href="#ind-6" data-id="1") Liquer de cacao
+			a(href="#ind-5" data-id="2") Beurre de cacao
+			a(href="#ind-4" data-id="3") Poudre de cacao
+			br 
+			a(href="#ind-3" data-id="4") Chocolat liquide
+			a(href="#ind-2" data-id="5") Chocolat en vrac
+			a(href="#ind-1" data-id="6") Drops
+
+		.industies__slider(data-width="600" data-height="350" data-nav="false" data-loop="true" data-arrows="always")
+			.industies__item(id="ind-6" style="background-image: url(./layout/images/ind-6.png)")
+				.industies__title Liquer de cacao
+			.industies__item(id="ind-5" style="background-image: url(./layout/images/ind-5.png)")
+				.industies__title Beurre de cacao
+			.industies__item(id="ind-4" style="background-image: url(./layout/images/ind-4.png)")
+				.industies__title Poudre de cacao
+				.industies__text naturelle - alcalinisée  (10-12%, 20-22%)
+			.industies__item(id="ind-3" style="background-image: url(./layout/images/ind-3.png)")
+				.industies__title Chocolat liquide
+				.industies__text noir, lait ou blanc
+			.industies__item(id="ind-2" style="background-image: url(./layout/images/ind-2.png)")
+				.industies__title Chocolat en vrac
+				.industies__text noir, lait ou blanc
+			.industies__item(id="ind-1" style="background-image: url(./layout/images/ind-1.png)")
+				.industies__title Drops
+				.industies__text Calibres  1000. 7500, 12000, 22000 Pcs/kg<br>Packaging cartons de 6 et 10 kg, sac de 25kg et big bag de 800kg
+			
+			
+			
+
+
+
+
+include includes/footer

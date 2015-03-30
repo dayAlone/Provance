@@ -1,0 +1,318 @@
+include includes/header
+<body class="index">
+
+.toolbar
+	.container
+		.row
+			nav.nav.nav--white
+				ul
+					li
+						a.nav__item.nav__item--hidden(href="#home")
+							include ../../public_html/layout/images/svg/logo.svg
+					li
+						a.nav__item(href="./about.html") L'entreprise
+						ul
+							li
+								a.nav__item(href="./about.html#about-first") Notre histoire
+							li
+								a.nav__item(href="./about.html#about-second") Notre activité
+							li
+								a.nav__item(href="./about.html#about-third") Qualite et certification
+							li
+								a.nav__item(href="./about.html#about-fourth") Notre équipe
+					li
+						a.nav__item(href="#collection") Notre collection
+						ul
+							li
+								a.nav__item(href="./products-industries.html") Produits industriels
+							li
+								a.nav__item(href="./products-public.html") Produits grand public  
+					li
+						a.nav__item(href="#store") La boutique
+					li
+						a.nav__item(href="#chocolate") Chocolaté
+						ul
+							li
+								a.nav__item(href="./fabric.html") fabrication
+							li
+								a.nav__item(href="#Recepts") Recettes gourmandes
+					li
+						a.nav__item(href="#media") Media
+				
+//-#loader.loader
+#enter.enter
+	.logo
+		include ../../public_html/layout/images/svg/logo.svg
+	.panel
+		a(href="#") Français
+		a(href="#") English
+		a(href="#") Русский
+	.footer
+		span Tel : +33 (0) 6 37 50 38 20
+		span Fax : +33 972 386 444
+		span 
+			a(href="info@chocolateriedeprovence.fr") info@chocolateriedeprovence.fr
+		
+		
+	video.video(autoplay="autoplay" loop)
+		source(src="./layout/video/lang.mp4" type="video/mp4")
+		source(src="./layout/video/lang.ogv" type="video/ogg")
+		source(src="./layout/video/lang.webm" type="video/webm")
+
+.slider
+	section.page(data-mods="white", id="home")
+		.container
+			
+			include ../../public_html/layout/images/svg/text.svg
+		.contacts
+			span Tel : +33 (0) 6 37 50 38 20
+			span Fax : +33 972 386 444
+			span 
+				a(href="info@chocolateriedeprovence.fr") info@chocolateriedeprovence.fr
+	section.page(data-mods="small, brown", id="history")
+		.container
+			.row
+				.col-xs-5
+					//img(src="./layout/images/flower.png")
+					.fotorama(data-autoplay="true", data-arrows="false", data-width="100%")
+						img(src="./layout/images/history-slide.png")
+						img(src="./layout/images/history-slide.png")
+						img(src="./layout/images/history-slide.png")
+				.col-xs-7.xxl-padding-left
+					.scroll
+						.scroll__frame
+							//h1.page__title Notre histoire 
+							h3.page__sub-title La Chocolaterie de Provence : <br>une aventure industrielle et humaine
+							p Fondée en 1952 dans le 11ème arrondissement de Marseille,  l’usine de chocolat du quartier de Saint-Menet fait partie intégrante du patrimoine économique et architectural (ses bâtiments sont signés de l’architecte Ferdinand Pouillon) de la cité phocéenne.Créée à l’origine par Nestlé, cette entreprise a été reprise en 2012 par des investisseurs russes.
+
+							h3.page__sub-title Une nouvelle ère
+							p La Chocolaterie de Provence, rebaptisée en l’honneur de son territoire d’origine, entame désormais avec optimisme et détermination le troisième chapitre de son histoire, portée par de nouvelles ambitions tout en restant résolument ancrée dans le tissu économique local. Le fameux dicton marseillais « quand on sent le chocolat, c’est qu’il va pleuvoir » a encore de beaux jours devant lui !
+							
+							h3.page__sub-title Une nouvelle ère
+							p La Chocolaterie de Provence, rebaptisée en l’honneur de son territoire d’origine, entame désormais avec optimisme et détermination le troisième chapitre de son histoire, portée par de nouvelles ambitions tout en restant résolument ancrée dans le tissu économique local. Le fameux dicton marseillais « quand on sent le chocolat, c’est qu’il va pleuvoir » a encore de beaux jours devant lui !
+					p 
+						a(href="./about.html#about-second") Notre activité <br>
+						a(href="./about.html#about-third") Qualite et certification<br>
+						a(href="./about.html#about-fourth") Notre équipe
+	section.page(data-mods="small, gold", id="collection")
+		//-a.collection__bottom(href="#") Visitez la Boutique!
+		.container.center
+			h1.page__title.center Notre collection 
+			a.xxl-margin-top(href="#Map" data-toggle="modal") Ou trouver nos produits?
+			.row
+				.col-xs-6.right
+					a.collection__link.xxl-margin-right(href="./products-industries.html") produits industriels
+				.col-xs-6.left
+					a.collection__link.xxl-margin-left(href="./products-public.html") produits grand public  
+	section.page(data-mods="small, brown", id="store")
+		.container.center
+			h1.page__title.l-margin-bottom Visiter la boutique
+			p Présentation de la boutique de la chocolaterie Horaires d’ouverture. <br> Lien et infos pour réserver ses places pour la visite guidée de la chocolaterie.
+			p.xxl-margin-top.xxl-margin-bottom.m-padding-top.m-padding-bottom
+				//img(src='./layout/images/map.png')
+			p.xl-line-height
+				| LA CHOCOLATERIE DE PROVENCE<br>
+				| 43, chemin vicinal de la Millière , Saint Menet 13011 Marseille<br>
+				span.divider
+				| Tél. : +33 (0) 6 37 50 38 20
+				span.divider
+				a(href="#") www.chocolateriedeprovence.fr
+				|  + Liens Facebook/réseaux sociaux<br>
+	section.page(data-mods="small, gold", id="chocolate")
+		.container.center
+			h1.page__title.l-margin-bottom Chocolaté
+			p Phasellus suscipit bibendum nibh sit amet imperdiet. Quisque faucibus sapien a enim lobortis fermentum. <br>
+				| In iaculis nunc vitae ornare interdum. Aliquam posuere metus leo, et fermentum magna euismod et. <br>
+				| Nam vitae mauris ut urna molestie rhoncus. <br>
+				| Fusce sodales gravida ipsum id vulputate. Suspendisse malesuada est at nibh sollicitudin, <br>
+				| vel interdum sem malesuada. Maecenas efficitur, arcu in ultricies vulputate, ipsum magna eleifend nulla, <br>
+				| in euismod ante turpis sit amet justo<br>
+			p.xl-margin-top
+				a(href="#") Processus de fabrication
+				a(href="#Recepts" data-toggle="modal") Recettes gourmandes
+				//-a(href="#").disabled Chef Lionel Levy
+		video.video(loop)
+			source(src="./layout/video/choko.mp4" type="video/mp4")
+			source(src="./layout/video/choko.ogv" type="video/ogg")
+			source(src="./layout/video/choko.webm" type="video/webm")
+	section.page(data-mods="small, brown", id="media")
+		.container
+			.row
+				.col-xs-6
+					#news
+						h1.page__title News
+						.scroll
+							.scroll__frame
+								.news
+									.news__item
+										.row
+											.col-xs-5
+												a.news__image(href="#News", data-toggle="modal" style="background-image: url(./layout/images/n-1.jpg)")
+											.col-xs-7
+												.news__date Le 7, 8, 9 mars 2015
+												a.news__title(href="#News", data-toggle="modal") la chocolaterie de Provence était présente au salon du chocolat à Marseille.
+												
+									.news__item
+										.row
+											.col-xs-5
+												a.news__image(href="#News", data-toggle="modal" style="background-image: url(./layout/images/n-1.jpg)")
+											.col-xs-7
+												.news__date Le 11 février 2015
+												a.news__title(href="#News", data-toggle="modal") a eu lieu l’inauguration de la boutique de l’usine la Chocolaterie de Provence
+												
+									.news__item
+										.row
+											.col-xs-5
+												a.news__image(href="#News", data-toggle="modal" style="background-image: url(./layout/images/n-1.jpg)")
+											.col-xs-7
+												.news__date Le 11 décembre 2014
+												a.news__title(href="#News", data-toggle="modal") nous avons présentes à de nombreux journalistes dont la Provence,  LCM, le Figaro ……)
+												
+									
+
+				.col-xs-6
+					#media-list
+						h1.page__title Media
+						.scroll
+							.scroll__frame
+								.media
+									.media__item(style="background-image: url(./layout/images/m-1.jpg)")
+										.media__title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nulla, vulputate et consectetur eget, lacinia eu odio. Quisque eu commodo mi.
+									.media__item(style="background-image: url(./layout/images/m-2.jpg)")
+										.media__title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nulla, vulputate et consectetur eget, lacinia eu odio. Quisque eu commodo mi.
+									.media__item(style="background-image: url(./layout/images/m-1.jpg)")
+										.media__title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nulla, vulputate et consectetur eget, lacinia eu odio. Quisque eu commodo mi.
+									.media__item(style="background-image: url(./layout/images/m-2.jpg)")
+										.media__title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nulla, vulputate et consectetur eget, lacinia eu odio. Quisque eu commodo mi.
+		.footer
+			.container
+				.row
+					.col-xs-2.col-lg-1
+						.logo
+							include ../../public_html/layout/images/svg/logo.svg
+					.col-xs-9.col-lg-10.info.center
+						a(href="#") La chocolaterie
+						span Tél. : +33 (0) 4 84 25 82 80
+						span Fax : +33 972 386 444
+						a(href="#") info@chocolateriedeprovence.fr
+					.col-xs-1.right
+						nobr
+							a(href="#")
+								include ../../public_html/layout/images/svg/fb.svg
+							a(href="#")
+								include ../../public_html/layout/images/svg/insta.svg
+
+.modal.fade(id="Recept", tabindex="-1", role="dialog" aria-hidden="true", data-parsley-validate)
+	.modal-dialog
+		.modal-content
+			a.close(data-dismiss="modal", href="#")
+				include ../../public_html/layout/images/svg/close.svg
+			h2.modal__title.center Recettes gourmandes
+			.scroll.xl-margin-top
+				.scroll__frame
+					.recept
+						.row
+							.col-xs-5
+								img(src="./layout/images/r-2.jpg")
+							.col-xs-7
+								p Le chef étoilé de l’Intercontinental Lionel Levy présente ses verrines de crumble, préparées avec le chocolat à pâtisser de La Chocolaterie de Provence, disponible auprès du grand public dans la boutique
+						.row
+							.col-xs-5
+								img(src="./layout/images/r-1.jpg")
+							.col-xs-7
+								p Le chef étoilé de l’Intercontinental Lionel Levy présente ses verrines de crumble, préparées avec le chocolat à pâtisser de La Chocolaterie de Provence, disponible auprès du grand public dans la boutique
+						.row
+							.col-xs-5
+								img(src="./layout/images/r-2.jpg")
+							.col-xs-7
+								p Le chef étoilé de l’Intercontinental Lionel Levy présente ses verrines de crumble, préparées avec le chocolat à pâtisser de La Chocolaterie de Provence, disponible auprès du grand public dans la boutique
+						.row
+							.col-xs-5
+								img(src="./layout/images/r-2.jpg")
+							.col-xs-7
+								p Le chef étoilé de l’Intercontinental Lionel Levy présente ses verrines de crumble, préparées avec le chocolat à pâtisser de La Chocolaterie de Provence, disponible auprès du grand public dans la boutique
+						
+
+.modal.fade(id="Recepts", tabindex="-1", role="dialog" aria-hidden="true", data-parsley-validate)
+	.modal-dialog
+		.modal-content
+			a.close(data-dismiss="modal", href="#")
+				include ../../public_html/layout/images/svg/close.svg
+			h2.modal__title.center Recettes gourmandes
+			.scroll
+				.scroll__frame
+					.recepts
+						.row
+							.col-xs-12
+								.recepts__item
+									.row
+										.col-xs-4
+											a.recepts__image(href="./pdf.pdf", target="_blank", style="background-image: url(./layout/images/rec.png)")
+										.col-xs-7
+											a.recepts__title(href="./pdf.pdf", target="_blank") LA RECETTE DE LIONEL LEVY POUR LA CHOCOLATERIE DE PROVENCE
+											.recepts__text En cette veille de Saint-Valentin, le chef étoilé Lionel Levy propose une recette à base du chocolat à pâtisser de La Chocolaterie de Provence, disponible dans la boutique. Facile à réaliser, elle ravira 10 petits et grands ou deux amoureux très gourmands.
+						
+
+.modal.fade(id="News", tabindex="-1", role="dialog" aria-hidden="true", data-parsley-validate)
+	.modal-dialog.modal-lg
+		.modal-content
+			a.close(data-dismiss="modal", href="#")
+				include ../../public_html/layout/images/svg/close.svg
+			h2.modal__title 20 ЯНВАРЯ
+			h4.modal__sub-title Состоялось открытие первого шоколадного бутика в Москве
+			.carousel
+				img(src="./layout/images/c-1.jpg")
+				img(src="./layout/images/c-2.jpg")
+				img(src="./layout/images/c-1.jpg")
+				img(src="./layout/images/c-2.jpg")
+				img(src="./layout/images/c-1.jpg")
+			p.center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis placerat ligula. Aliquam sit amet lectus non turpis pulvinar sodales in non nibh. Sed in lobortis dui. Nulla et felis elit. Sed maximus convallis faucibus. Integer auctor lorem non arcu pulvinar interdum. Morbi lorem nisl, molestie et suscipit eget, tempus et diam. 
+			p.center Curabitur felis ligula, viverra dictum mauris sit amet, pellentesque bibendum metus. Suspendisse eget rhoncus ipsum. Aliquam ultricies pretium diam in efficitur. Curabitur eget nisl quis arcu accumsan aliquet. 
+
+
+
+
+
+
+.modal.fade(id="Map", tabindex="-1", role="dialog" aria-hidden="true", data-parsley-validate)
+	.modal-dialog.modal-lg
+		.modal-content
+			a.close(data-dismiss="modal", href="#")
+				include ../../public_html/layout/images/svg/close.svg
+			h2.modal__title.center Ou trouver nos produits?
+			.row
+				.col-xs-9.col-lg-10
+					.modal__map
+				.col-xs-3.col-lg-2
+					ul.countries
+						li
+							a.country(href='#') Canada
+						li
+							a.country(href='#') France
+							ul
+								li 
+									a.city(href='#') Paris 
+								li 
+									a.city(href='#') Nice 
+								li 
+									a.city(href='#') Cannes 
+								li 
+									a.city(href='#') Lyon
+						li 
+							a.country(href='#') Royaume-Uni
+						li 
+							a.country(href='#') Russie
+							ul
+								li 
+									a.city(href='#') Paris 
+								li 
+									a.city(href='#') Nice 
+								li 
+									a.city(href='#') Cannes 
+								li 
+									a.city(href='#') Lyon
+
+
+
+
+include includes/footer

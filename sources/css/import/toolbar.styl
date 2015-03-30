@@ -1,0 +1,113 @@
+.toolbar
+	position fixed
+	top 0
+	width 100%
+	left 0
+	z-index 400
+	font-family: 'Trojan'
+	.nav
+		text-align: center
+		padding 0px 0 20px 0
+		white-space no-wrap
+		t transform
+		transform translateX(0px)
+		display none
+		.loaded &
+			display block
+		> ul
+			> li
+				.nav__item, .nav__item--hidden
+					opacity 1
+					pointer-events initial
+					font-size 17px
+					margin 28px 32px
+					&--hidden
+						margin 0px 32px 0
+				> ul 
+					text-align: center
+					> li
+						.nav__item
+							font-size 12px
+							margin 0
+							@media (min-height: 600px)
+								line-height 10px
+							@media (min-height: 680px)
+								line-height 15px
+								margin-bottom 2px
+
+		ul
+			margin-left 0
+			padding 0
+			list-style: none
+			li
+				display inline-block
+				position relative
+				svg
+					display inline-block
+					position relative
+					left 50%
+					transform translateX(-50%)
+					vertical-align: middle
+					width 145px
+					height 80px
+				ul
+					position absolute
+					top 100%
+					display none
+					margin-top -24px
+					width 100%
+					@media (min-height: 680px)
+						margin-top -17px
+					li
+						width 100%
+						float: left
+						clear: both
+						
+		&__item
+			t all, .6s
+			color #c0a878
+			font-weight: bold
+			margin 0 35px
+			line-height 23px
+			text-transform uppercase
+			display inline-block
+			&--active
+				border-line alpha(@color, .3), 20px
+			&--hidden
+				background transparent
+			&:hover
+				color #522f1d
+				
+		&--white
+			.nav__item
+				color rgba(255,255,255,.6)
+				&--active
+					border-line alpha(@color, .3), 20px
+				&:hover
+					color white
+					svg 
+						path, g
+							fill white
+				svg
+					path, g
+						fill #c0bdba
+		&--brown
+			.nav__item
+				color #512f1f	
+				&--active
+					border-line alpha(@color, .3), 20px
+				&:hover
+					color #ab925d	
+		&--gold
+			.nav__item
+				color #b9874d
+				&--active
+					border-line alpha(@color, .3), 20px
+				&:hover
+					color #c58f3a
+					svg 
+						path, g
+							fill #c58f3a
+				svg 
+					path, g
+						fill #b9874d

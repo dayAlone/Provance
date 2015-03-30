@@ -1907,15 +1907,14 @@ svg g {
 .slider #home .contacts span {
   position: relative;
   margin: 0 70px;
-}
-.enter .footer span:after,
-.slider #home .contacts span:after {
-  content: "";
-  border-left: 1px solid #fff;
-  position: absolute;
-  top: -3px;
-  left: -20px;
-  height: 20px;
+/*&:after
+				content ""
+				border-left 1px solid white
+				position absolute
+				top -3px
+				left -20px
+				height 20px
+			*/
 }
 .enter .footer a,
 .slider #home .contacts a {

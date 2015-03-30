@@ -4704,16 +4704,19 @@ svg g {
   position: relative;
 }
 #about-fourth .person__image-elm {
-  -webkit-filter: grayscale(100%) sepia(50%);
-  -webkit-background-size: auto 75%;
-  -moz-background-size: auto 75%;
-  background-size: auto 75%;
+  -webkit-filter: grayscale(90%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   background-position: center center;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  width: 70%;
+  left: 15%;
+  height: 80%;
+  top: 10%;
   z-index: -1;
   background-repeat: no-repeat;
 }
@@ -4721,6 +4724,8 @@ svg g {
   margin-right: 8px;
   display: inline-block;
   margin-bottom: -10px;
+  position: relative;
+  z-index: 2;
   max-height: 100px;
 }
 @media (min-height: 640px) {

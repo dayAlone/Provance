@@ -1757,6 +1757,14 @@ svg g {
     width: 1200px;
   }
 }
+#about-third .fotorama__stage {
+  max-height: 250px;
+}
+@media (min-height: 680px) {
+  #about-third .fotorama__stage {
+    max-height: none;
+  }
+}
 @media (min-height: 680px) {
   #about-fourth > .container {
     margin-top: -10px;

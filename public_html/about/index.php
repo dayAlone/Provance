@@ -41,8 +41,8 @@ include('./.left.menu.php');
   <section id="about-second" class="page">
     <div class="container">
       <div class="row">
-        <div class="col-xs-5"><img src="/layout/images/h-2.png" class="max-width"></div>
-        <div class="col-xs-7 xxl-padding-left">
+        <div class="col-xs-5 col-xs-1"><img src="/layout/images/h-2.png" class="max-width"></div>
+        <div class="col-xs-6 xxl-padding-left">
           <h1 class="page__title"><?=$aMenuLinks[0][0]?></h1>
           <div class="scroll">
             <div class="scroll__frame">
@@ -56,10 +56,10 @@ include('./.left.menu.php');
   <section id="about-third" class="page">
     <div class="container">
       <div class="row">
-        <div class="col-xs-5">
+        <div class="col-xs-5 col-xs-1">
           {GALLERY:8}
         </div>
-        <div class="col-xs-7 xxl-padding-left">
+        <div class="col-xs-6 xxl-padding-left">
           <h1 class="page__title"><?=$aMenuLinks[1][0]?></h1>
           <div class="scroll">
             <div class="scroll__frame">
@@ -73,7 +73,7 @@ include('./.left.menu.php');
   <section id="about-fourth" class="page">
     <div class="container">
     	<div class="row">
-    		<div class="col-xs-5">
+    		<div class="col-xs-6">
     			<?
   			      $APPLICATION->IncludeComponent("bitrix:news.list", "staff", 
   			        array(
@@ -89,7 +89,7 @@ include('./.left.menu.php');
   			      );
   			    ?>
     		</div>
-    		<div class="col-xs-7">
+    		<div class="col-xs-6">
     			<h1 class="page__title left"><?=$aMenuLinks[2][0]?></h1>
     			<?=COption::GetOptionString("grain.customsettings", $lang."_about_fourth") ?>
     		</div>

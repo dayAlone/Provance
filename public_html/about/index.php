@@ -41,7 +41,7 @@ include('./.left.menu.php');
   <section id="about-second" class="page">
     <div class="container">
       <div class="row">
-        <div class="col-xs-5 col-xs-1"><img src="/layout/images/h-2.png" class="max-width"></div>
+        <div class="col-xs-5 col-xs-offset-1"><img src="/layout/images/h-2.png" class="max-width"></div>
         <div class="col-xs-6 xxl-padding-left">
           <h1 class="page__title"><?=$aMenuLinks[0][0]?></h1>
           <div class="scroll">
@@ -56,7 +56,7 @@ include('./.left.menu.php');
   <section id="about-third" class="page">
     <div class="container">
       <div class="row">
-        <div class="col-xs-5 col-xs-1">
+        <div class="col-xs-5 col-xs-offset-1">
           {GALLERY:8}
         </div>
         <div class="col-xs-6 xxl-padding-left">

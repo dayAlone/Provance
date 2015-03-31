@@ -28596,7 +28596,7 @@ return function (global, window, document, undefined) {
       return $("a[href='#" + b.activeFrame.id + "']").addClass('active');
     }).fotorama();
     $('.industies').elem('nav').find('a').click(function(e) {
-      $('.industies').elem('slider').data('fotorama').show(parseInt($(this).data('id')) - 1);
+      $('.industies').elem('slider').data('fotorama').show(parseInt($(this).data('id')));
       return e.preventDefault();
     });
     $('.public').elem('slider').on('fotorama:ready', function() {

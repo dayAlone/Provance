@@ -3,8 +3,11 @@
 <nav class="nav <?=$arParams['CLASS']?> <?=$APPLICATION->AddBufferContent("nav_class");?>">
 	<ul>
 	<?foreach ($arResult as $key=>$item):
+		if($item['ADDITIONAL_LINKS']["*"])
+			$item['LINK'] = $item['ADDITIONAL_LINKS']["*"];
 		if($item['ADDITIONAL_LINKS'][$arParams['CACHE_NOTES']])
 			$item['LINK'] = $item['ADDITIONAL_LINKS'][$arParams['CACHE_NOTES']];
+
 		?>
 		<li>
 			<a href="<?=$item['LINK']?>" <?=$item['PARAMS']['MORE']?> class="nav__item <?=($item['SELECTED']?'nav__item--active':'')?>">

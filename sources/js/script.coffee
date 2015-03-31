@@ -215,7 +215,7 @@ $(document).ready ->
 	).fotorama()
 		
 	$('.industies').elem('nav').find('a').click (e)->
-		$('.industies').elem('slider').data('fotorama').show parseInt($(this).data('id')) - 1
+		$('.industies').elem('slider').data('fotorama').show parseInt($(this).data('id'))
 		e.preventDefault()
 
 	$('.public').elem('slider')

@@ -17,7 +17,7 @@ $aMenuLinks = Array(
 	Array(
 		"Notre collection", 
 		"/collections/", 
-		Array(), 
+		Array("*"=>"/#collection", "/"=>"#collection"), 
 		Array(), 
 		"" 
 	),
@@ -31,7 +31,7 @@ $aMenuLinks = Array(
 	Array(
 		"Chocolaté", 
 		"/fabrication/", 
-		Array("/"=>"#chocolate"), 
+		Array("*"=>"/#chocolate", "/"=>"#chocolate"), 
 		Array(), 
 		"" 
 	),

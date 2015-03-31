@@ -1172,6 +1172,7 @@ body.product {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  min-height: 550px;
 }
 body.fabric {
   background: url("../images/fabric.jpg") top left no-repeat;
@@ -1296,19 +1297,31 @@ body.text {
 .industies {
   text-align: center;
   position: absolute;
-  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  bottom: -60px;
   margin-top: 40px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media (min-height: 680px) {
+  .industies {
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+  }
 }
 .industies .industies__nav,
 .public__nav {
   line-height: 20px;
+  margin: 0 auto;
   margin-bottom: 20px;
+  max-width: 600px;
 }
 .industies .industies__nav a,
 .public__nav a {
@@ -1921,6 +1934,9 @@ svg g {
 }
 .max-width {
   max-width: 100%;
+}
+#panel {
+  display: none;
 }
 .enter {
   pointer-events: initial;
@@ -2801,6 +2817,7 @@ svg g {
   background: transparent;
   margin: 6vh 0 22vh;
   position: relative;
+  text-transform: lowercase;
 }
 .slider #collection .collection__link.xxl-margin-right {
   margin-right: 70px !important;

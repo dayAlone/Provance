@@ -3,7 +3,7 @@ $aMenuLinks = Array(
 	Array(
 		"Home", 
 		"/", 
-		Array(), 
+		Array("/"=>"#home"), 
 		Array('SVG' => 'logo'), 
 		"" 
 	),

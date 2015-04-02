@@ -322,7 +322,7 @@ $(document).ready ->
 			$('body').addClass 'mobile'
 
 
-		delay 500, ->
+		delay 800, ->
 			paths = $('#home path:not(defs path)')
 			paths.each (i, e) ->
 				e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength()

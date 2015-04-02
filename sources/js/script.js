@@ -522,7 +522,7 @@
       if ($.browser.mobile) {
         $('body').addClass('mobile');
       }
-      return delay(500, function() {
+      return delay(800, function() {
         var paths, tl;
         paths = $('#home path:not(defs path)');
         paths.each(function(i, e) {

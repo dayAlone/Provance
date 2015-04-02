@@ -7,7 +7,7 @@ $aMenuLinks = $APPLICATION->IncludeComponent("bitrix:menu.sections","",Array(
         "DETAIL_PAGE_URL" => "#ELEMENT_CODE#/", 
         "IBLOCK_TYPE" => "news", 
         "IBLOCK_ID" => "4", 
-        "DEPTH_LEVEL" => "2", 
+        "DEPTH_LEVEL" => "1", 
         "CACHE_TYPE" => "A", 
         "CACHE_TIME" => "3600" 
     )

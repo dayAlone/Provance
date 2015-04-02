@@ -265,23 +265,6 @@
         });
       });
     });
-    delay(300, function() {
-      var paths, tl;
-      paths = $('#home path:not(defs path)');
-      paths.each(function(i, e) {
-        e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
-      });
-      tl = new TimelineMax;
-      return tl.add([
-        TweenLite.to(paths.eq(0), 1, {
-          strokeDashoffset: 0,
-          delay: 0.0
-        }).duration(8), TweenLite.to(paths.eq(1), 1, {
-          strokeDashoffset: 0,
-          delay: 0.5
-        }).duration(8)
-      ]);
-    });
     $('#Map .country').click(function(e) {
       var block;
       if ($(this).parent().find('ul').length > 0) {
@@ -537,8 +520,25 @@
       });
       $('body').addClass('loaded');
       if ($.browser.mobile) {
-        return $('body').addClass('mobile');
+        $('body').addClass('mobile');
       }
+      return delay(500, function() {
+        var paths, tl;
+        paths = $('#home path:not(defs path)');
+        paths.each(function(i, e) {
+          e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        });
+        tl = new TimelineMax;
+        return tl.add([
+          TweenLite.to(paths.eq(0), 1, {
+            strokeDashoffset: 0,
+            delay: 0.0
+          }).duration(8), TweenLite.to(paths.eq(1), 1, {
+            strokeDashoffset: 0,
+            delay: 0.5
+          }).duration(8)
+        ]);
+      });
     });
   });
 

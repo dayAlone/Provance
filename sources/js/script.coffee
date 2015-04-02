@@ -85,21 +85,6 @@ $(document).ready ->
 				autoPlay: 2000
 				speed: 0
 
-	delay 300, ->
-		paths = $('#home path:not(defs path)')
-		paths.each (i, e) ->
-			e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength()
-			return
-		tl = new TimelineMax
-		tl.add [
-			TweenLite.to(paths.eq(0), 1,
-				strokeDashoffset: 0
-				delay: 0.0).duration(8)
-			TweenLite.to(paths.eq(1), 1,
-				strokeDashoffset: 0
-				delay: 0.5).duration(8)
-		]
-
 	#$('#Map').modal()
 
 	$('#Map .country').click (e)->
@@ -336,6 +321,21 @@ $(document).ready ->
 		if $.browser.mobile
 			$('body').addClass 'mobile'
 
+
+		delay 500, ->
+			paths = $('#home path:not(defs path)')
+			paths.each (i, e) ->
+				e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength()
+				return
+			tl = new TimelineMax
+			tl.add [
+				TweenLite.to(paths.eq(0), 1,
+					strokeDashoffset: 0
+					delay: 0.0).duration(8)
+				TweenLite.to(paths.eq(1), 1,
+					strokeDashoffset: 0
+					delay: 0.5).duration(8)
+			]
 
 
 

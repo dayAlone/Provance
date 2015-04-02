@@ -1173,6 +1173,7 @@ body.product {
   -moz-background-size: cover;
   background-size: cover;
   min-height: 550px;
+  overflow: auto;
 }
 body.fabric {
   background: url("../images/fabric.jpg") top left no-repeat;
@@ -1390,13 +1391,21 @@ body.text {
   background: transparent;
 }
 .public {
-  position: absolute;
+  float: left;
   width: 100%;
   height: 100%;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
 }
 @media (min-height: 600px) {
   .public {
     padding-top: 180px;
+  }
+}
+@media (min-height: 680px) {
+  .public {
+    position: absolute;
   }
 }
 .public__slider {
@@ -1422,6 +1431,12 @@ body.text {
 }
 .public__slider .fotorama__arr {
   background: transparent;
+  top: 25%;
+}
+@media (min-height: 680px) {
+  .public__slider .fotorama__arr {
+    top: 50%;
+  }
 }
 .public__item > img {
   position: absolute;
@@ -1680,9 +1695,11 @@ body.text {
   }
 }
 .public__nav {
-  padding: 0 15%;
+  width: 100%;
+  max-width: 860px;
+  margin-left: -430px;
+  left: 50%;
   text-align: center;
-  margin: 0 auto;
   top: auto;
   position: absolute;
   bottom: 350px;
